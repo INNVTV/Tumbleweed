@@ -9,7 +9,7 @@ Emails signups are replicated in 2 tables. One sorted alphabetically: `waitingli
 
 Signups page is the default route.
 
-Reports can be viewed at the following routes: `/Reports/Time` & `/Reports/Alpha`
+Reports can be viewed at the following routes: `/Report/List/Latest` & `/Report/List/Alpha`
 
 * _ReportController Actions should be secured when put into production_
 
