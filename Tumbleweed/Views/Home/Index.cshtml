@@ -1,0 +1,39 @@
+﻿@model Tumbleweed.Models.SignupModel
+@{
+    ViewBag.Title = "Welcome";
+}
+
+<style>
+    html {
+        background: url('/img/bg.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+
+<div class="col-lg-6 col-lg-offset-3 panel">
+
+    <h1 class="margin-base-vertical">Ever seen the tumbleweed blow by?</h1>
+    <h4>Sometimes it can be a while. Why wait?</h4>
+
+    <p>We'll let you know when it's ready.*</p>
+
+    @using (Html.BeginForm())
+        {
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-large", @placeholder = "your@emailaddress.com" })
+            @Html.ValidationMessageFor(m => m.Email)
+            <i class="help-block"><small>* We will never spam you.</small></i>
+            <button type="submit" class="btn btn-warning">Keep me posted</button>
+
+        }
+
+
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Tumbleweed</p>
+    </footer>
+
+</div>
